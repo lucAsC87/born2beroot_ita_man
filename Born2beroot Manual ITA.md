@@ -1,0 +1,59 @@
+*NOZIONI GENERALI*
+- *Virtual Machine*
+	- un computer all'interno di un computer, che funziona come un software che emula un computer fisico
+	- è un ambiente isolato, in cui poter sperimentare senza coinvolgere la macchina principale
+	- imita i componenti hardware
+- *Rocky/Debian*
+	- Rocky è una distro Linux pensata per un utilizzo aziendale, più complicata da impostare e più recente
+	- Debian è più indicata per dilettanti nella system administration, è user friendly e, considerata la sua data di creazione e la vastità della sua community, ha una ricca ed estesa documentazione per la risoluzione dei problemi. Mira ad essere un sistema operativo universale, in grado di coprire vari utilizzi.
+- *Apt/Aptitude*
+	- Aptitude è più avanzato, ha un'interfaccia per navigare e cercare i pacchetti in maniera interattiva. Inoltre gestisce meglio le necessità e i conflitti di dipendenze, suggerendo alternative.
+	- Apt è più semplice e diretto.
+- *App Armor*
+	- aggiunge un'ulteriore difesa, limitando i permessi e le azioni dei programmi solo se esplicitamente concessi
+	- gli amministratori e gli sviluppatori possono migliorare la sicurezza limitando brecce e accessi non autorizzati a dati e risorse sensibili
+- *LVM*
+	- Logical Volume Manager
+	- permette di manipolare le partizioni su uno storage device
+- *SSH*
+	- Secure Shell
+	- meccanismo di autenticazione tra macchina e host
+	- usa tecniche di cifratura in modo da cifrare la comunicazione tra client e host
+- *UFW*
+	- Uncomplicated Firewall
+	- un'interfaccia che modifica il firewll, configurando le porte sulle quali permettere la connessione.
+	- utile in congiunzione con SSH
+- *Sudo*
+	- Superuser Do
+	- esegue comandi con il massimo dei permessi e privilegi
+- *Password Policy*
+	- editando il file login.defs è possibile definire il numero massimo di giorni per la scandenza di una password, il numero minimo di giorni permessi prima della sua modifica e quanti giorni prima notificare all'utente la sua scadenza
+	- vantaggi: aumenta la sicurezza del sistema
+	- svantaggi: è necessario cambiare frequentemente password
+- *Sudoers File*
+	- contiene la configurazione dei privilegi degli utenti
+	- si accede col comando `sudo visudo`
+- *monitoring.sh script*
+	- controlla performance e stato di un server o di un sistema
+	- raccoglie dati sull'utilizzo delle risorse di sistema, traffico di rete e altre metriche
+- *wall*
+	- trasmette messaggi a tutti gli utenti collegati al sistema
+- *cron*
+	- programma che permette l'esecuzione automatica di script e/o comandi a dati intervalli di tempo, specificati nel file crontab.
+	- ogni asterisco del file indica: minuto, ora, giorno, mese, giorno della settimana
+
+*COMANDI UTILI*
+- `hostname -l` - recupera l'indirizzo della macchina
+- `shasum NOMEFILE.vdi` - recupera signature della macchina
+- `sudo ufw status` - verifica stato del firewall
+- `sudo systemctl status ssh` - verifica stato ssh
+- `lsb_release -a || cat /etc/os-release` - stampa sistema operativo
+- `getent group <NOMEGRUPPO>` - utenti del gruppo
+- `sudo adduser <NOMEUTENTE>` - aggiunge utente
+- `sudo groupadd <NOMEGRUPPO>` - aggiunge gruppo
+- `sudo usermod -aG <GRUPPO UTENTE>` - aggiunge utente al gruppo
+- `groups <UTENTE>` - controlla gruppi utente
+- `sudo chage -l <UTENTE>` - password policy del nuovo utente
+- `hostnamectl` - hostname della macchina
+- `sudo hostnamectl set-hostname <NOMEMACCHINA>` - imposta nuovo hostname della macchina
+- `lsblk` - elenca le partizioni
