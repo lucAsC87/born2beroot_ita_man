@@ -1,2 +1,3 @@
-# born2beroot_ita_man
-Manuale con concetti base e comandi utili per il progetto born2beroot.
+Un semplice elenco di:
+- concetti teorici alla base del progetto
+- comandi da lanciare per verificare il suo corretto funzionamento
